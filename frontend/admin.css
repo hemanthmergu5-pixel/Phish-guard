@@ -1,0 +1,24 @@
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#08111f;color:#dbeafe}.top{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 5%;background:#0d1728;border-bottom:1px solid #24364d}.brand{font-size:22px;font-weight:800;color:#fff}.brand span{font-size:10px;background:#2563eb;padding:4px 7px;border-radius:5px;margin-left:7px}.sub{font-size:12px;color:#7f94ad;margin-top:4px}.top-actions{display:flex;gap:9px;align-items:center}.top-actions a,.top-actions button,#refresh{background:#15243a;color:#cbd5e1;border:1px solid #334155;border-radius:8px;padding:9px 13px;text-decoration:none;cursor:pointer}.top-actions button{background:#991b1b;border-color:#b91c1c;color:#fff}main{max-width:1400px;margin:auto;padding:30px 5% 60px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}.card,.panel{background:#0e1a2b;border:1px solid #26384e;border-radius:14px;box-shadow:0 10px 30px #0003}.card{padding:20px}.card small{color:#8194aa}.card strong{display:block;font-size:32px;color:#fff;margin:8px 0}.card span{font-size:11px;color:#64748b}.panel{padding:20px;margin-top:18px}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:15px}.panel h2{margin:0;color:#fff;font-size:19px}.panel p{margin:5px 0 0;color:#71849a;font-size:12px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:850px;font-size:12px}th,td{text-align:left;padding:11px 9px;border-bottom:1px solid #1d2b3d;vertical-align:top}th{color:#647b94;font-weight:600}td{color:#c7d2e0}tr:hover td{background:#101f33}.user{font-weight:700;color:#fff}.email{color:#93c5fd}.pill{display:inline-block;padding:4px 8px;border-radius:99px;font-size:10px;font-weight:700;background:#064e3b;color:#a7f3d0}.admin{background:#312e81;color:#ddd6fe}.empty{text-align:center!important;color:#64748b;padding:30px}.message{background:#3b1f08;color:#fcd34d;border:1px solid #92400e;padding:13px;border-radius:9px;margin-bottom:15px}.hidden{display:none!important}@media(max-width:800px){.cards{grid-template-columns:1fr 1fr}.top{align-items:flex-start;flex-direction:column}}@media(max-width:480px){.cards{grid-template-columns:1fr}}
+
+/* PhishGuard 3.2 — admin responsive layout */
+html { -webkit-text-size-adjust:100%; }
+body { overflow-x:hidden; }
+button, a { touch-action:manipulation; }
+@media (max-width: 900px) {
+  .top { padding:16px 4%; }
+  main { padding:22px 4% 50px; }
+  .cards { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .panel { padding:16px; }
+}
+@media (max-width: 600px) {
+  .top { align-items:stretch; flex-direction:column; }
+  .top-actions { width:100%; }
+  .top-actions a, .top-actions button { flex:1; text-align:center; min-height:44px; }
+  main { padding:16px 3% 40px; }
+  .cards { grid-template-columns:1fr; }
+  .card strong { font-size:28px; }
+  .panel-head { align-items:stretch; flex-direction:column; }
+  #refresh { width:100%; min-height:44px; }
+  .table-wrap { margin-inline:-4px; padding-inline:4px; }
+  table { min-width:760px; }
+}

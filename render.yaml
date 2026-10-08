@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: phishguard
+    runtime: node
+    plan: starter
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/v1/health
+    disk:
+      name: phishguard-data
+      mountPath: /opt/render/project/src/backend/database
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 5000
+      - key: TRUST_PROXY
+        value: true
+      - key: DB_PATH
+        value: /opt/render/project/src/backend/database/phishguard.db
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_NAME
+        sync: false

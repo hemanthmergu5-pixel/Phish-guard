@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PhishGuard Admin Dashboard</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="top">
+  <div><div class="brand">🛡️ PhishGuard <span>ADMIN</span></div><div class="sub">User activity & session monitoring</div></div>
+  <div class="top-actions"><a href="/">Back to PhishGuard</a><button id="logout">Logout</button></div>
+</header>
+<main>
+  <div id="message" class="message hidden"></div>
+  <section class="cards">
+    <div class="card"><small>Total users</small><strong id="totalUsers">—</strong><span>Registered accounts</span></div>
+    <div class="card"><small>Active now</small><strong id="activeUsers">—</strong><span>Heartbeat within 90 seconds · measured active time</span></div>
+    <div class="card"><small>Total sessions</small><strong id="totalSessions">—</strong><span>Completed sessions</span></div>
+    <div class="card"><small>Average session</small><strong id="avgDuration">—</strong><span>Across completed sessions</span></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><div><h2>🟢 Active users</h2><p>Users currently active or recently active. The page refreshes automatically.</p></div><button id="refresh">↻ Refresh</button></div>
+    <div class="table-wrap"><table><thead><tr><th>User</th><th>Email</th><th>Login time</th><th>Last active</th><th>Active for</th><th>IP</th><th>Browser</th></tr></thead>
+    <tbody id="activeTable"><tr><td colspan="7" class="empty">Loading...</td></tr></tbody></table></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><div><h2>👥 All users</h2><p>Account-level activity summary.</p></div></div>
+    <div class="table-wrap"><table><thead><tr><th>User</th><th>Email</th><th>Role</th><th>Registered</th><th>Total logins</th><th>Last login</th><th>Total time</th></tr></thead>
+    <tbody id="usersTable"><tr><td colspan="7" class="empty">Loading...</td></tr></tbody></table></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><div><h2>🕒 Session history</h2><p>Completed login sessions. Duration is calculated from recorded activity heartbeats; inactive gaps are not counted.</p></div></div>
+    <div class="table-wrap"><table><thead><tr><th>User</th><th>Login</th><th>Logout</th><th>Duration</th><th>End reason</th><th>IP</th><th>Browser</th></tr></thead>
+    <tbody id="historyTable"><tr><td colspan="7" class="empty">Loading...</td></tr></tbody></table></div>
+  </section>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>

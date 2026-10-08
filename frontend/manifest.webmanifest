@@ -1,0 +1,10 @@
+{
+  "name": "PhishGuard",
+  "short_name": "PhishGuard",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "description": "PhishGuard security awareness and phishing analysis web app",
+  "icons": []
+}
